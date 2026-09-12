@@ -1,0 +1,9 @@
+dataset: {files.entity_ids.filename: entity_ids.del, files.entity_ids.type: map, files.relation_ids.filename: relation_ids.del,
+  files.relation_ids.type: map, files.test.filename: test.del, files.test.size: 77689,
+  files.test.type: triples, files.test_without_unseen.filename: test_without_unseen.del,
+  files.test_without_unseen.size: 73070, files.test_without_unseen.type: triples,
+  files.train.filename: train.del, files.train.size: 621516, files.train.type: triples,
+  files.train_sample.filename: train_sample.del, files.train_sample.size: 77689, files.train_sample.type: triples,
+  files.valid.filename: valid.del, files.valid.size: 77689, files.valid.type: triples,
+  files.valid_without_unseen.filename: valid_without_unseen.del, files.valid_without_unseen.size: 73065,
+  files.valid_without_unseen.type: triples, name: uobm_3, num_entities: 127645, num_relations: 28}

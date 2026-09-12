@@ -1,0 +1,26 @@
+dataset:
+  files.entity_ids.filename: entity_ids.del
+  files.entity_ids.type: map
+  files.relation_ids.filename: relation_ids.del
+  files.relation_ids.type: map
+  files.test.filename: test.del
+  files.test.size: 5000
+  files.test.type: triples
+  files.test_without_unseen.filename: test_without_unseen.del
+  files.test_without_unseen.size: 4982
+  files.test_without_unseen.type: triples
+  files.train.filename: train.del
+  files.train.size: 1079040
+  files.train.type: triples
+  files.train_sample.filename: train_sample.del
+  files.train_sample.size: 5000
+  files.train_sample.type: triples
+  files.valid.filename: valid.del
+  files.valid.size: 5000
+  files.valid.type: triples
+  files.valid_without_unseen.filename: valid_without_unseen.del
+  files.valid_without_unseen.size: 4978
+  files.valid_without_unseen.type: triples
+  name: yago3-10
+  num_entities: 123182
+  num_relations: 37
