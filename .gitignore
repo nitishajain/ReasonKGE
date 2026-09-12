@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated dataset indexes (prepared .del files are intentionally included)
+*.pckl
+*.pickle
+
+# Experiments and model artifacts
+runs/
+local/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.log
+*.prof
+trace.yaml
+trace.csv
+
+# ReasonKGE generated caches
+predict_dict.json
+subject_dict.json
+object_dict.json
+triple_samples_map.json
+abstract_triple_samples_map.json
+all_local_types.csv
+extended_local_types*.csv
+*_consistent_results.csv
+
+# Java binaries are supplied externally
+java/lib/*.jar

@@ -1,0 +1,12 @@
+dataset: {files.entity_ids.filename: entity_ids.del, files.entity_ids.type: map, files.relation_ids.filename: relation_ids.del,
+  files.relation_ids.type: map, files.test.filename: test.del, files.test.size: 19805,
+  files.test.split_type: test, files.test.type: triples, files.test_without_unseen.filename: test_without_unseen.del,
+  files.test_without_unseen.size: 19203, files.test_without_unseen.split_type: test,
+  files.test_without_unseen.type: triples, files.train.filename: train.del, files.train.size: 69320,
+  files.train.split_type: train, files.train.type: triples, files.train_sample.filename: train_sample.del,
+  files.train_sample.size: 9902, files.train_sample.split_type: train, files.train_sample.type: triples,
+  files.valid.filename: valid.del, files.valid.size: 9902, files.valid.split_type: valid,
+  files.valid.type: triples, files.valid_without_unseen.filename: valid_without_unseen.del,
+  files.valid_without_unseen.size: 9483, files.valid_without_unseen.split_type: valid,
+  files.valid_without_unseen.type: triples, name: dbpedia15k, num_entities: 12842,
+  num_relations: 279}

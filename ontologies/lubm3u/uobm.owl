@@ -1,0 +1,1636 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#enrollIn -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#enrollIn">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isStudentOf"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Department"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasAlumnus -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasAlumnus">
+        <inverseOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDegreeFrom"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#University"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDegreeFrom -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDegreeFrom">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#University"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDoctoralDegreeFrom -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDoctoralDegreeFrom">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDegreeFrom"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#University"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMajor -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMajor">
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#AcademicSubject"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMasterDegreeFrom -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMasterDegreeFrom">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDegreeFrom"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#University"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMember -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMember">
+        <inverseOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasSameHomeTownWith -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasSameHomeTownWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasStudent -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasStudent">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMember"/>
+        <inverseOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isStudentOf"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#hasUndergraduateDegreeFrom -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasUndergraduateDegreeFrom">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasDegreeFrom"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#University"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isAdvisedBy -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isAdvisedBy">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isAffiliateOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isAffiliateOf">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isAffiliatedOrganizationOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isAffiliatedOrganizationOf">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isFriendOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isFriendOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#worksFor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isMemberOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isMemberOf"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isStudentOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isStudentOf">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isMemberOf"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#isTaughtBy -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#isTaughtBy">
+        <inverseOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#teacherOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Faculty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#like -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#like">
+        <equivalentProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#love"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#listedCourse -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#listedCourse">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#love -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#love"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#orgPublication -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#orgPublication">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#publicationAuthor -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#publicationAuthor">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#publicationDate -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#publicationDate">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#publicationResearch -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#publicationResearch">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Research"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#researchProject -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#researchProject">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#ResearchGroup"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Research"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#softwareDocumentation -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#softwareDocumentation">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Software"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#softwareVersion -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#softwareVersion">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Software"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#subOrganizationOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#subOrganizationOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#takesCourse -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#takesCourse">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#teacherOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#teacherOf">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Faculty"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#teachingAssistantOf -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#teachingAssistantOf">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#TeachingAssistant"/>
+        <rdfs:range rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#tenured -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#tenured">
+        <rdfs:domain rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#worksFor -->
+
+    <ObjectProperty rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#worksFor">
+        <rdfs:subPropertyOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isMemberOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#AcademicSubject -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#AcademicSubject">
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Insterest"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Article -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Article">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#AssistantProfessor -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#AssistantProfessor">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#AssociateProfessor -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#AssociateProfessor">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#BaseballFan -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#BaseballFan">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                        <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Baseball"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#BaseballLover -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#BaseballLover">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                        <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Baseball"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBallFan -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBallFan">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                        <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBall"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBallLover -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBallLover">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                        <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBall"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Book -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Book">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Chair -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Chair">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Department"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#ClericalStaff -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#ClericalStaff">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#SupportingStaff"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#College -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#College">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#ConferencePaper -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#ConferencePaper">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Article"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Course -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Dean -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Dean">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#College"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Department -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Department">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Director -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Director">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Program"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Employee -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Employee">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#worksFor"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Engineering -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Engineering">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#AcademicSubject"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Faculty -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Faculty">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Employee"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#FineArts -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#FineArts">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#AcademicSubject"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#FullProfessor -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#FullProfessor">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#GraduateCourse -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#GraduateCourse">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#GraduateStudent -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#GraduateStudent">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#takesCourse"/>
+                        <allValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#GraduateCourse"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#takesCourse"/>
+                        <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#HumanitiesAndSocial -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#HumanitiesAndSocial">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#AcademicSubject"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Insterest -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Insterest">
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Institute -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Institute">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#JournalArticle -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#JournalArticle">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Article"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Lecturer -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Faculty"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Man -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Man">
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Woman"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Manual -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Manual">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Music -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Music">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Insterest"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#NonScienceStudent -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#NonScienceStudent">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+                    <Class>
+                        <complementOf>
+                            <Restriction>
+                                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMajor"/>
+                                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Science"/>
+                            </Restriction>
+                        </complementOf>
+                    </Class>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization">
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#PeopleWithHobby -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#PeopleWithHobby">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                        <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Person -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person">
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#PostDoc -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#PostDoc">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Faculty"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Faculty"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Program -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Program">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication">
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule"/>
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Research -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Research">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#ResearchAssistant -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#ResearchAssistant">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#worksFor"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#ResearchGroup"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#ResearchGroup -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#ResearchGroup">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Schedule">
+        <disjointWith rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Science -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Science">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#AcademicSubject"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#ScienceStudent -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#ScienceStudent">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMajor"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Science"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Software -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Software">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Specification -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Specification">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Sports -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Sports">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Insterest"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#SportsFan -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#SportsFan">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Sports"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#SportsLover -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#SportsLover">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Sports"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Student -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isStudentOf"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#SupportingStaff -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#SupportingStaff">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Employee"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#SwimmingFan -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#SwimmingFan">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                        <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Swimming"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#SwimmingLover -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#SwimmingLover">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                        <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Swimming"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#SystemsStaff -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#SystemsStaff">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#SupportingStaff"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#TeachingAssistant -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#TeachingAssistant">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#teachingAssistantOf"/>
+                        <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#TechnicalReport -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#TechnicalReport">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Article"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#TennisFan -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#TennisFan">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                        <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Tennis"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#UndergraduateStudent -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#UndergraduateStudent">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#University -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#University">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#UnofficialPublication -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#UnofficialPublication">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Publication"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#VisitingProfessor -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#VisitingProfessor">
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Professor"/>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Woman -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Woman"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#WomanCollege -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#WomanCollege">
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#College"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasStudent"/>
+                        <allValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#UndergraduateStudent"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasStudent"/>
+                        <allValuesFrom>
+                            <Class>
+                                <complementOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Man"/>
+                            </Class>
+                        </allValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Work -->
+
+    <Class rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Work"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Aeronautical_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Aeronautical_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Anthropology -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Anthropology"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Architecture -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Architecture"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Asian_Arts -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Asian_Arts"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Astronomy -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Astronomy"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Baseball -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Baseball"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBall -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBall"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Biology -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Biology"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Biomedical_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Biomedical_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Chemical_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Chemical_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Chemistry -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Chemistry"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Civil_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Civil_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Computer_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Computer_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Computer_Science -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Computer_Science"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Drama -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Drama"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Economics -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Economics"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Electrical_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Electrical_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#English -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#English"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Geosciences -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Geosciences"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#History -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#History"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Humanities -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Humanities"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Industry_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Industry_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Latin_Arts -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Latin_Arts"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Linguistics -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Linguistics"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Marine_Science -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Marine_Science"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Materials_Science -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Materials_Science"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Materical_Science_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Materical_Science_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Mathematics -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Mathematics"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Mechanical_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Mechanical_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Media_Arts_And_ciences -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Media_Arts_And_ciences"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Medieval_Arts -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Medieval_Arts"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Modern_Arts -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Modern_Arts"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Modern_Languages -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Modern_Languages"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Musics -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Musics"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Performing_Arts -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Performing_Arts"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Petroleuml_Engineering -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Petroleuml_Engineering"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Philosophy -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Philosophy"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Physics -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Physics"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Psychology -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Psychology"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Religions -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Religions"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Statistics -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Statistics"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Swimming -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Swimming"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Tennis -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Tennis"/>
+    
+
+
+    <!-- http://semantics.crl.ibm.com/univ-bench-dl.owl#Theatre_and_Dance -->
+
+    <NamedIndividual rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Theatre_and_Dance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Sports"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#SportsFan"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Department"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Chair"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Program"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Director"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isStudentOf"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Sports"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#SportsLover"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#teachingAssistantOf"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Course"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#TeachingAssistant"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#worksFor"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Organization"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Employee"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Baseball"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BaseballFan"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBall"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBallFan"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Swimming"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#SwimmingFan"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isCrazyAbout"/>
+                <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Tennis"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#TennisFan"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Baseball"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BaseballLover"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBall"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#BasketBallLover"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                <hasValue rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Swimming"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#SwimmingLover"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#like"/>
+                <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minCardinality>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#PeopleWithHobby"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Student"/>
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#hasMajor"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Science"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#ScienceStudent"/>
+    </Class>
+    <Class>
+        <intersectionOf rdf:parseType="Collection">
+            <Restriction>
+                <onProperty rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#isHeadOf"/>
+                <someValuesFrom rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#College"/>
+            </Restriction>
+        </intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Dean"/>
+    </Class>
+    <Class>
+        <unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Man"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Woman"/>
+        </unionOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Person"/>
+    </Class>
+    <Class>
+        <oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Aeronautical_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Biomedical_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Chemical_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Civil_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Computer_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Electrical_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Industry_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Materical_Science_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Mechanical_Engineering"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Petroleuml_Engineering"/>
+        </oneOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Engineering"/>
+    </Class>
+    <Class>
+        <oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Anthropology"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Economics"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#English"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#History"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Humanities"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Linguistics"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Modern_Languages"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Philosophy"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Psychology"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Religions"/>
+        </oneOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#HumanitiesAndSocial"/>
+    </Class>
+    <Class>
+        <oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Architecture"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Asian_Arts"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Drama"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Latin_Arts"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Media_Arts_And_ciences"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Medieval_Arts"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Modern_Arts"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Musics"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Performing_Arts"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Theatre_and_Dance"/>
+        </oneOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#FineArts"/>
+    </Class>
+    <Class>
+        <oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Astronomy"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Biology"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Chemistry"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Computer_Science"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Geosciences"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Marine_Science"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Materials_Science"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Mathematics"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Physics"/>
+            <rdf:Description rdf:about="http://semantics.crl.ibm.com/univ-bench-dl.owl#Statistics"/>
+        </oneOf>
+        <rdfs:subClassOf rdf:resource="http://semantics.crl.ibm.com/univ-bench-dl.owl#Science"/>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

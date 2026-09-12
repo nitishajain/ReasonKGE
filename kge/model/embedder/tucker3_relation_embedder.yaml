@@ -1,0 +1,19 @@
+import: [lookup_embedder]
+
+tucker3_relation_embedder:
+  class_name: Tucker3RelationEmbedder
+  base_embedder:
+    type: lookup_embedder
+    dim: 100                  # dimensionality for relation embeddings
+    dropout: 0.               # dropout used for relation embeddings
+    +++: +++
+  dim: -1                     # set automatically to square of entity dimensionality
+  initialize: normal_          # xavier, uniform, normal
+  initialize_args:
+    +++: +++
+  dropout: 0.                 # dropout used for mixing matrices
+  normalize: ''               # alternatively: normalize '', L2
+  regularize: 'lp'              # '', 'lp'
+  regularize_weight: 0.0
+  regularize_args:
+    p: 2.0

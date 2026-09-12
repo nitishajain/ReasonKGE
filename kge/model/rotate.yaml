@@ -1,0 +1,37 @@
+import: [lookup_embedder]
+
+rotate:
+  class_name: RotatE
+
+  entity_embedder:
+    type: lookup_embedder
+    # Note: dimensionality (key "dim") refers to the combined size of the
+    # head and tail embedding. Must be even.
+    +++: +++
+
+  relation_embedder:
+    type: lookup_embedder
+    dim: -1  # -1 means: pick as half the entity_embedder.dim
+
+    # The components of the relation embeddings in RotatE represent radians and
+    # are converted to values on the complex unit ball when being used. This
+    # initialization is used in the original RotatE implementation: uniform on
+    # the complex unit ball.
+    initialize: uniform_
+    initialize_args:
+      uniform_:
+        a: -3.14159265359
+        b: 3.14159265359
+
+    +++: +++
+
+  # Whether to keep relation phases into [-pi,pi] during training. A phase
+  # outside this range will be transformed into the range so that the rotation
+  # remains the same (e.g., -1.2pi will be transformed to 0.8pi). This has no
+  # effect on model predictions, but makes regularization during training more
+  # useful. Currently only supported when
+  # relation_embedder.type==lookup_embedder.
+  normalize_phases: True
+
+  # which norm to use to score distances
+  l_norm: 1.
