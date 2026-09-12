@@ -1,0 +1,103 @@
+dataset:
+  files:
+    test:
+      size: 5000
+    test_without_unseen:
+      filename: test_without_unseen.del
+      size: 4982
+      type: triples
+    train:
+      size: 1079040
+    train_sample:
+      filename: train_sample.del
+      size: 5000
+      type: triples
+    valid:
+      size: 5000
+    valid_without_unseen:
+      filename: valid_without_unseen.del
+      size: 4978
+      type: triples
+  name: yago3-10
+  num_entities: 123182
+  num_relations: 37
+eval:
+  batch_size: 256
+  chunk_size: 25000
+  metrics_per:
+    relation_type: true
+  trace_level: example
+import:
+- transe
+- reciprocal_relations_model
+lookup_embedder:
+  dim: 128
+  initialize: uniform_
+  initialize_args:
+    normal_:
+      mean: 0.0
+      std: 3.5688807324453804e-05
+    uniform_:
+      a: -1.0000000000065512e-05
+    xavier_normal_:
+      gain: 1.0
+    xavier_uniform_:
+      gain: 1.0
+  regularize: ''
+model: reciprocal_relations_model
+negative_sampling:
+  filtering:
+    implementation: fast_if_available
+    o: false
+    p: false
+    s: false
+    split: ''
+  frequency:
+    smoothing: 1
+  implementation: batch
+  num_samples:
+    o: 8942
+    # o: 10
+    p: 0
+    s: 8919
+    # s: 10
+  sampling_type: uniform
+  shared: false
+  with_replacement: true
+reciprocal_relations_model:
+  base_model:
+    type: transe
+train:
+  auto_correct: true
+  batch_size: 128
+  loss_arg: 1.0
+  lr_scheduler: ReduceLROnPlateau
+  lr_scheduler_args:
+    factor: 0.95
+    mode: max
+    patience: 5
+    threshold: 0.0001
+  max_epochs: 200
+  optimizer: Adam
+  optimizer_args:
+    lr: 0.00030000000000000014
+  type: reasoning_sampling.True
+transe:
+  entity_embedder:
+    dropout: -0.3519595685173064
+    normalize:
+      p: -1.0
+    regularize_weight: 7.469488745511875e-12
+  l_norm: 2.0
+  relation_embedder:
+    dropout: -0.17305121371616672
+    normalize:
+      p: -1.0
+    regularize_weight: 1.8180176908040284e-07
+valid:
+  early_stopping:
+    min_threshold:
+      epochs: 50
+      metric_value: 0.05
+    patience: 10
+
